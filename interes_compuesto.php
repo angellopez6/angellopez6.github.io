@@ -413,8 +413,8 @@
                           </tr>
                         </thead>
                         <tbody>
-                          <h5>El Capital Final es: <?php echo number_format($datos['Capital Final']) . " " . $datos['Moneda'] ?></h5>
-                          <h5>Intereses Generados: <?php echo number_format($datos['Interés']) . " " . $datos['Moneda']?></h5>
+                          <h5>El Capital Final es: <?php echo number_format($datos['Capital Final'],2) . " " . $datos['Moneda'] ?></h5>
+                          <h5>Intereses Generados: <?php echo number_format($datos['Interés'],2) . " " . $datos['Moneda']?></h5>
                           <?php
                           
                           
@@ -431,9 +431,9 @@
 
                           <tr>
                             <th scope="row">0</th>
-                            <td><?php echo number_format($datos['Capital Inicial']) . " " . $datos['Moneda']; ?></td>
+                            <td><?php echo number_format($datos['Capital Inicial'],2) . " " . $datos['Moneda']; ?></td>
                             <td>0,0 <?php echo $datos['Moneda'] ?></td>
-                            <td><?php echo number_format($datos['Capital Inicial']) . " " . $datos['Moneda']; ?></td>
+                            <td><?php echo number_format($datos['Capital Inicial'],2) . " " . $datos['Moneda']; ?></td>
                           </tr>   
 
                           <?php
@@ -443,9 +443,9 @@
                           ?>
                           <tr>
                             <th scope="row"><?php echo $i+1; ?></th>
-                            <td><?php echo  number_format(round( $datos['Capital Inicial'],2)) . " " . $datos['Moneda']; ?></td>
-                            <td><?php echo  number_format(round(($datos['Capital Inicial']*$datos['Tasa']),2)) . " " . $datos['Moneda']; ?></td>
-                            <td><?php echo  number_format(round(($datos['Capital Inicial']+=$datos['Capital Inicial']*$datos['Tasa']),2)) . " " . $datos['Moneda']; ?></td>
+                            <td><?php echo  number_format($datos['Capital Inicial'],2) . " " . $datos['Moneda']; ?></td>
+                            <td><?php echo  number_format($datos['Capital Inicial']*$datos['Tasa'],2) . " " . $datos['Moneda']; ?></td>
+                            <td><?php echo  number_format($datos['Capital Inicial']+=$datos['Capital Inicial']*$datos['Tasa'],2) . " " . $datos['Moneda']; ?></td>
                           </tr>
                         
 
